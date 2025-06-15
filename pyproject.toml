@@ -1,0 +1,29 @@
+[project]
+name = "python_skelly"
+version = "0.0.1"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.ruff]
+line-length = 121
+indent-width = 4
+
+lint.select = ["E", "F"]
+lint.unfixable = ["ALL"]
+
+exclude = [
+    "__pycache__",
+    ".venv"
+]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["E402"]
+"tests/**" = ["E402"]
