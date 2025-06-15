@@ -19,12 +19,15 @@ Yellow=\033[0;33m
 #######################################################################
 
 # Phony Declarations
-.PHONY: all run lint clean test inclusive
+.PHONY: lint clean spotless test inclusive
 
 # Clean up the working directory (NOTE: NEED TO ADD DEEPER REMOVAL OF PYCACHES)
 clean:
-	@rm -rf .pytest_cache __pycache__ .ruff_cache
+	@rm -rf .pytest_cache .ruff_cache
 	@find . -type d -name "__pycache__" -exec rm -rf {} +
+
+spotless: clean
+	@rm -rf htmlcov/
 	@rm -f .coverage
 
 # Run the linter on all of the files

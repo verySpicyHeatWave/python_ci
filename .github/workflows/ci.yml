@@ -16,10 +16,8 @@ jobs:
         run: |
           sudo apt update
           sudo apt install -y \
-            python3          
-          curl -LsSf https://astral.sh/uv/install.sh >> install.sh
-          chmod +x install.sh
-          ./install.sh
+            python3
+          curl -LsSf https://astral.sh/uv/install.sh | sh
           uv venv
           source .venv/bin/activate
           make inclusive
