@@ -22,7 +22,6 @@ jobs:
           ./install.sh
           uv venv
           source .venv/bin/activate
-          uv pip install -r requirements.txt
           make inclusive
 
       - name: Run the linter
