@@ -2,7 +2,7 @@ name: Python CI Tests
 run-name: ${{ github.actor }} is testing out Github Actions
 on:
   push:
-    branches: [dev]
+    branches: [main, dev]
 
 jobs:
   build:
