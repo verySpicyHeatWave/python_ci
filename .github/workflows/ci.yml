@@ -26,10 +26,14 @@ jobs:
           make inclusive
 
       - name: Run the linter
-        run: make lint
+        run: |
+          source .venv/bin/activate
+          make lint
 
       - name: Execute Unit tests
-        run: make test
+        run: |
+          source .venv/bin/activate
+          make test
 
       - name: Post-checkout messages
         run: |
