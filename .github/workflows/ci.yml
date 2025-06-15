@@ -20,6 +20,8 @@ jobs:
           curl -LsSf https://astral.sh/uv/install.sh >> install.sh
           chmod +x install.sh
           ./install.sh
+          uv venv
+          source .venv/bin/activate
           uv pip install -r requirements.txt
           make inclusive
 

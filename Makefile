@@ -37,6 +37,7 @@ test: $(TESTFILE)
 
 inclusive:
 	@uv pip install -e .
+	@uv pip install -r 'requirements.txt'
 
 
 
